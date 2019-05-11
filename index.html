@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_816a57d3aeb843229f6cb95cd2123cbf {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_816a57d3aeb843229f6cb95cd2123cbf" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_816a57d3aeb843229f6cb95cd2123cbf = L.map(
+        'map_816a57d3aeb843229f6cb95cd2123cbf', {
+        center: [-15.8, -48.0011],
+        zoom: 11.8,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_849239b0de1549b3a4ceb35b28f97d17 = L.tileLayer(
+        'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": "abc"
+}).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+    
+        var marker_84174d80d83a4d269ec8b54a8205c19d = L.marker(
+            [-15.8306559, -47.9264053],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_c1d07251b2f24425bffd9e6ccf1877e1 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_84174d80d83a4d269ec8b54a8205c19d.setIcon(icon_c1d07251b2f24425bffd9e6ccf1877e1);
+            
+    
+        marker_84174d80d83a4d269ec8b54a8205c19d.bindTooltip(
+            '<div>'
+            + 'Ernesto Café' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_d2904f2d69c940c6be6a1b92af998731 = L.marker(
+            [-15.747044099999998, -47.885780600000004],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_5e84120d4be942acbb756e007fd841fb = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d2904f2d69c940c6be6a1b92af998731.setIcon(icon_5e84120d4be942acbb756e007fd841fb);
+            
+    
+        marker_d2904f2d69c940c6be6a1b92af998731.bindTooltip(
+            '<div>'
+            + 'Quintal F/508 ' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_46128746c3cc4fef8951c78258056a44 = L.marker(
+            [-15.865766399999998, -48.085064200000005],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_f753732718fa492b94517a19384bab8f = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_46128746c3cc4fef8951c78258056a44.setIcon(icon_f753732718fa492b94517a19384bab8f);
+            
+    
+        marker_46128746c3cc4fef8951c78258056a44.bindTooltip(
+            '<div>'
+            + 'República Café ' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_9cacb342fd4d457ca9c66d1b9ad6d72b = L.marker(
+            [-15.8122564, -48.0842067],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_d43275b6845e49a3a90e989969f4c770 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9cacb342fd4d457ca9c66d1b9ad6d72b.setIcon(icon_d43275b6845e49a3a90e989969f4c770);
+            
+    
+        marker_9cacb342fd4d457ca9c66d1b9ad6d72b.bindTooltip(
+            '<div>'
+            + 'Caneca’s Café ' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_28483da6aabf430e8e3ef0ba78846d43 = L.marker(
+            [-15.759269699999999, -47.8879261],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_93e8244001434b978eccdaadd478d19d = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_28483da6aabf430e8e3ef0ba78846d43.setIcon(icon_93e8244001434b978eccdaadd478d19d);
+            
+    
+        marker_28483da6aabf430e8e3ef0ba78846d43.bindTooltip(
+            '<div>'
+            + 'Café e um Chêro ' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_d7e6a29f983c4e5dbed2026a6a555fa9 = L.marker(
+            [-15.7700393, -47.882076299999994],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_958a4082ffff44238a29674bbfb9a27b = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d7e6a29f983c4e5dbed2026a6a555fa9.setIcon(icon_958a4082ffff44238a29674bbfb9a27b);
+            
+    
+        marker_d7e6a29f983c4e5dbed2026a6a555fa9.bindTooltip(
+            '<div>'
+            + 'Seu Patrício Café' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_cbcdca38971143979bf0e1e7ed8ac8de = L.marker(
+            [-15.832857800000001, -48.0751064],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_5268d30519f448b394a145303cb8c89a = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cbcdca38971143979bf0e1e7ed8ac8de.setIcon(icon_5268d30519f448b394a145303cb8c89a);
+            
+    
+        marker_cbcdca38971143979bf0e1e7ed8ac8de.bindTooltip(
+            '<div>'
+            + 'Chocolates do Cerrado' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_29ee501451d44bd8bff8e28a265ff516 = L.marker(
+            [-15.8352039, -48.0399003],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_0ed3915eaaa745448a6badcb015f7e83 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_29ee501451d44bd8bff8e28a265ff516.setIcon(icon_0ed3915eaaa745448a6badcb015f7e83);
+            
+    
+        marker_29ee501451d44bd8bff8e28a265ff516.bindTooltip(
+            '<div>'
+            + 'Emílio’s Café ' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_66b39fa261c748788bfcad51cb16ddd0 = L.marker(
+            [-15.7470158, -47.8858497],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_76098364090e4c098d59e251fea863e1 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_66b39fa261c748788bfcad51cb16ddd0.setIcon(icon_76098364090e4c098d59e251fea863e1);
+            
+    
+        marker_66b39fa261c748788bfcad51cb16ddd0.bindTooltip(
+            '<div>'
+            + 'Clandestino Café' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_7bc2ba6ae07b4a71819c20553ca75645 = L.marker(
+            [-15.8434566, -47.985193100000004],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_9aeb5bd34d224f548092c4e9c6e3f490 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7bc2ba6ae07b4a71819c20553ca75645.setIcon(icon_9aeb5bd34d224f548092c4e9c6e3f490);
+            
+    
+        marker_7bc2ba6ae07b4a71819c20553ca75645.bindTooltip(
+            '<div>'
+            + 'Acervo Café' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_23590ec451634910b3e3af94ad1bffa5 = L.marker(
+            [-15.7954848, -47.894865700000004],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_f50c4e6790474a128f7a6fd6799bb5fa = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_23590ec451634910b3e3af94ad1bffa5.setIcon(icon_f50c4e6790474a128f7a6fd6799bb5fa);
+            
+    
+        marker_23590ec451634910b3e3af94ad1bffa5.bindTooltip(
+            '<div>'
+            + 'Civitá Cafés Especiais' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_e30fbd5e3e6c4c34a1ffa1172338e128 = L.marker(
+            [-15.833798000000002, -48.045178],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_acaf25b2992a4683baee5b3872fb2dc4 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e30fbd5e3e6c4c34a1ffa1172338e128.setIcon(icon_acaf25b2992a4683baee5b3872fb2dc4);
+            
+    
+        marker_e30fbd5e3e6c4c34a1ffa1172338e128.bindTooltip(
+            '<div>'
+            + 'Minimalize Café ' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_7945a4f4c7584fbeb9be033fb997f050 = L.marker(
+            [-15.815251199999999, -47.9119684],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_8044c32ada1f47f8835044fbe9e13215 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7945a4f4c7584fbeb9be033fb997f050.setIcon(icon_8044c32ada1f47f8835044fbe9e13215);
+            
+    
+        marker_7945a4f4c7584fbeb9be033fb997f050.bindTooltip(
+            '<div>'
+            + 'Mercado do Café' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_4df5b093bed5475fa9c91f78af075ac6 = L.marker(
+            [-15.739819099999998, -47.893555600000006],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_b79e01925bd64a25ae3282e03155f5a2 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4df5b093bed5475fa9c91f78af075ac6.setIcon(icon_b79e01925bd64a25ae3282e03155f5a2);
+            
+    
+        marker_4df5b093bed5475fa9c91f78af075ac6.bindTooltip(
+            '<div>'
+            + 'Salve Café Maravilha' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_910156b20d904141a94aaec4785a85fc = L.marker(
+            [-15.843902800000002, -48.029198],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_6550f45db04a485e99a5edf089c1bcbb = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_910156b20d904141a94aaec4785a85fc.setIcon(icon_6550f45db04a485e99a5edf089c1bcbb);
+            
+    
+        marker_910156b20d904141a94aaec4785a85fc.bindTooltip(
+            '<div>'
+            + 'Adorável Café' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_53d615ba6c284d98913334383d7b141c = L.marker(
+            [-15.8428961, -47.9846321],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_fcc41cc4390441ceaa6c1d9a24d2303f = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_53d615ba6c284d98913334383d7b141c.setIcon(icon_fcc41cc4390441ceaa6c1d9a24d2303f);
+            
+    
+        marker_53d615ba6c284d98913334383d7b141c.bindTooltip(
+            '<div>'
+            + 'Cafuné Café e Bar' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_f5bbf67bd89b4dc69d711de7f0262b4a = L.marker(
+            [-15.8145487, -47.890049700000006],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_7a6122802c074a4baae0ac4279362681 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f5bbf67bd89b4dc69d711de7f0262b4a.setIcon(icon_7a6122802c074a4baae0ac4279362681);
+            
+    
+        marker_f5bbf67bd89b4dc69d711de7f0262b4a.bindTooltip(
+            '<div>'
+            + 'Blend Cafés & Livros' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+        var marker_bcd843b3fdac4346bf49aecbf956ede0 = L.marker(
+            [-15.773610000000001, -47.878704],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_816a57d3aeb843229f6cb95cd2123cbf);
+        
+    
+
+                var icon_11c959e30a1f4035909cbd5aead3ee31 = L.AwesomeMarkers.icon({
+                    icon: 'coffee',
+                    iconColor: 'lightgray',
+                    markerColor: 'black',
+                    prefix: 'fa',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bcd843b3fdac4346bf49aecbf956ede0.setIcon(icon_11c959e30a1f4035909cbd5aead3ee31);
+            
+    
+        marker_bcd843b3fdac4346bf49aecbf956ede0.bindTooltip(
+            '<div>'
+            + 'Los Baristas . Casa de Cafés' + '</div>',
+            {"sticky": true}
+        );
+        
+</script>
