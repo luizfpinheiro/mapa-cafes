@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-    <style>#map_577eb4ae078a4eb29064cf2a1f801477 {
+    <style>#map_fd02544eb1f1402687e10cc5ecd7bbfa {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -23,10 +23,32 @@
         top: 0.0%;
         }
     </style>
+    
+                <style>
+                    #scroll_zoom_toggler_43ae00571ffb4a27bad6629e6f5e1f37 {
+                        position:absolute;
+                        width:35px;
+                        bottom:10px;
+                        height:35px;
+                        left:10px;
+                        background-color:#fff;
+                        text-align:center;
+                        line-height:35px;
+                        vertical-align: middle;
+                        }
+                </style>
+            
 </head>
 <body>    
+    <h1 style="padding: 3px;">Com apoio do <a href=”instagram.com/brasiliacafeinada” target="_blank">COLETIVO BRASILIA CAFEINADA</a> ☕️☕️</h1>
+    <div class="folium-map" id="map_fd02544eb1f1402687e10cc5ecd7bbfa" ></div>
     
-    <div class="folium-map" id="map_577eb4ae078a4eb29064cf2a1f801477" ></div>
+            <img id="scroll_zoom_toggler_43ae00571ffb4a27bad6629e6f5e1f37" alt="scroll"
+                 src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/arrow-move.png"
+                 style="z-index: 999999"
+                 onclick="map_fd02544eb1f1402687e10cc5ecd7bbfa.toggleScroll()">
+            </img>
+            
 </body>
 <script>    
     
@@ -34,20 +56,20 @@
         var bounds = null;
     
 
-    var map_577eb4ae078a4eb29064cf2a1f801477 = L.map(
-        'map_577eb4ae078a4eb29064cf2a1f801477', {
-        center: [-15.8, -48.0011],
-        zoom: 11.8,
+    var map_fd02544eb1f1402687e10cc5ecd7bbfa = L.map(
+        'map_fd02544eb1f1402687e10cc5ecd7bbfa', {
+        center: [-15.8, -47.92],
+        zoom: 12.5,
         maxBounds: bounds,
         layers: [],
         worldCopyJump: false,
         crs: L.CRS.EPSG3857,
         zoomControl: true,
         });
-
+L.control.scale().addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
     
     
-    var tile_layer_92e65d7024e747cf9b267f8f3e46e9f9 = L.tileLayer(
+    var tile_layer_fd96f0c20fb24bdc8b694c1abe9bcb11 = L.tileLayer(
         'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
         {
         "attribution": null,
@@ -57,1563 +79,1205 @@
         "minZoom": 0,
         "noWrap": false,
         "subdomains": "abc"
-}).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
+}).addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
     
-        var marker_b66b02e56bb94496a918191b35424a68 = L.marker(
-            [-15.8306559, -47.9264053],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
+                    map_fd02544eb1f1402687e10cc5ecd7bbfa.scrollEnabled = true;
 
-                var icon_d122947af0594855847df33c8bc3b629 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b66b02e56bb94496a918191b35424a68.setIcon(icon_d122947af0594855847df33c8bc3b629);
+                    map_fd02544eb1f1402687e10cc5ecd7bbfa.toggleScroll = function() {
+                        if (this.scrollEnabled) {
+                            this.scrollEnabled = false;
+                            this.scrollWheelZoom.disable();
+                            }
+                        else {
+                            this.scrollEnabled = true;
+                            this.scrollWheelZoom.enable();
+                            }
+                        };
+
+                    map_fd02544eb1f1402687e10cc5ecd7bbfa.toggleScroll();
             
     
-            var popup_6cd3c5ba9fc44fe1b1d9d5a415d5417e = L.popup({maxWidth: '350'
+            var circle_marker_1f906bf83e254ba393a5e58c82f1c957 = L.circleMarker(
+                [-15.843902800000002, -48.029198],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
+            
+    
+            var popup_a6756d35286341ba8d19697b8bb6a6b1 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_9b8d34d02fa449ef8fc092da321f2a0a = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9RXJuZXN0byBDYWbDqXMgRXNwZWNpYWlzJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_6cd3c5ba9fc44fe1b1d9d5a415d5417e.setContent(i_frame_9b8d34d02fa449ef8fc092da321f2a0a);
+                var html_16567911b8364e958b634311e1caa3fe = $('<div id="html_16567911b8364e958b634311e1caa3fe" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/adoravelcafe" style="padding: 3px;" target="_blank">@adoravelcafe</a></b></div>')[0];
+                popup_a6756d35286341ba8d19697b8bb6a6b1.setContent(html_16567911b8364e958b634311e1caa3fe);
             
 
-            marker_b66b02e56bb94496a918191b35424a68.bindPopup(popup_6cd3c5ba9fc44fe1b1d9d5a415d5417e)
+            circle_marker_1f906bf83e254ba393a5e58c82f1c957.bindPopup(popup_a6756d35286341ba8d19697b8bb6a6b1)
             ;
 
             
         
     
-        marker_b66b02e56bb94496a918191b35424a68.bindTooltip(
-            '<div>'
-            + 'Ernesto Cafés Especiais' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_02cb2154d00746a4b6b6173b67daa67e = L.marker(
-            [-15.747044099999998, -47.885780600000004],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_ea10b64b1f76454daa17bf1c56a96ae0 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_02cb2154d00746a4b6b6173b67daa67e.setIcon(icon_ea10b64b1f76454daa17bf1c56a96ae0);
+            var circle_marker_012f4adc09ae4cf288a6a3929e37fbb0 = L.circleMarker(
+                [-15.827346100000002, -47.9209156],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_ad4e31f6d8ed4b609a7f966e247c3cc3 = L.popup({maxWidth: '350'
+            var popup_d8f7ba5042a24df0a948cde39063867a = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_f5d72690147f4bdfbd165e5f5c1ab515 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9UXVpbnRhbCBGLzUwOCAmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_ad4e31f6d8ed4b609a7f966e247c3cc3.setContent(i_frame_f5d72690147f4bdfbd165e5f5c1ab515);
+                var html_2fd67d7e28d74a6f9c53a540fb730a81 = $('<div id="html_2fd67d7e28d74a6f9c53a540fb730a81" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/belinicafe" style="padding: 3px;" target="_blank">@belinicafe</a></b></div>')[0];
+                popup_d8f7ba5042a24df0a948cde39063867a.setContent(html_2fd67d7e28d74a6f9c53a540fb730a81);
             
 
-            marker_02cb2154d00746a4b6b6173b67daa67e.bindPopup(popup_ad4e31f6d8ed4b609a7f966e247c3cc3)
+            circle_marker_012f4adc09ae4cf288a6a3929e37fbb0.bindPopup(popup_d8f7ba5042a24df0a948cde39063867a)
             ;
 
             
         
     
-        marker_02cb2154d00746a4b6b6173b67daa67e.bindTooltip(
-            '<div>'
-            + 'Quintal F/508 ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_4b9bd85848c744debdf6519b9a273fba = L.marker(
-            [-15.865766399999998, -48.085064200000005],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_58ab31cec20c4bbb8922e70fb95a1f3b = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_4b9bd85848c744debdf6519b9a273fba.setIcon(icon_58ab31cec20c4bbb8922e70fb95a1f3b);
+            var circle_marker_8a0c15d651414368957653d7b906859a = L.circleMarker(
+                [-15.7470158, -47.8858497],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_fdefd9c49e3a41b585eb116125037678 = L.popup({maxWidth: '350'
+            var popup_dc6e9492b46d4a01bf23db278d92330e = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_63d0275eb5af4aea95449cd7aa11536e = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9UkVQw5pCTElDQSAtIGNhZsOpICYgbmVnw7NjaW9zJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_fdefd9c49e3a41b585eb116125037678.setContent(i_frame_63d0275eb5af4aea95449cd7aa11536e);
+                var html_59684716ec7548248685fc04fad829c2 = $('<div id="html_59684716ec7548248685fc04fad829c2" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/cafeclandestino" style="padding: 3px;" target="_blank">@cafeclandestino</a></b></div>')[0];
+                popup_dc6e9492b46d4a01bf23db278d92330e.setContent(html_59684716ec7548248685fc04fad829c2);
             
 
-            marker_4b9bd85848c744debdf6519b9a273fba.bindPopup(popup_fdefd9c49e3a41b585eb116125037678)
+            circle_marker_8a0c15d651414368957653d7b906859a.bindPopup(popup_dc6e9492b46d4a01bf23db278d92330e)
             ;
 
             
         
     
-        marker_4b9bd85848c744debdf6519b9a273fba.bindTooltip(
-            '<div>'
-            + 'REPÚBLICA - café & negócios' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_6c0e256231e1469683f89fe4586f6d24 = L.marker(
-            [-15.8122564, -48.0842067],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_ba9faab9b0cd44d3bc074fe03b319d50 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_6c0e256231e1469683f89fe4586f6d24.setIcon(icon_ba9faab9b0cd44d3bc074fe03b319d50);
+            var circle_marker_b0918758aa964e54b3b775dfc41fb0c3 = L.circleMarker(
+                [-15.759269699999999, -47.8901148],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_02de8da898f54522ae495f2c3e4f2097 = L.popup({maxWidth: '350'
+            var popup_0796a8b7d9a843828f221b2866a3d158 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_2e375f6274fc44219beac22effab593b = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2FuZWNh4oCZcyBDYWbDqSAmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_02de8da898f54522ae495f2c3e4f2097.setContent(i_frame_2e375f6274fc44219beac22effab593b);
+                var html_0af63d8a34ee4ef08fd33051120ce835 = $('<div id="html_0af63d8a34ee4ef08fd33051120ce835" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/cafeeumchero" style="padding: 3px;" target="_blank">@cafeeumchero</a></b></div>')[0];
+                popup_0796a8b7d9a843828f221b2866a3d158.setContent(html_0af63d8a34ee4ef08fd33051120ce835);
             
 
-            marker_6c0e256231e1469683f89fe4586f6d24.bindPopup(popup_02de8da898f54522ae495f2c3e4f2097)
+            circle_marker_b0918758aa964e54b3b775dfc41fb0c3.bindPopup(popup_0796a8b7d9a843828f221b2866a3d158)
             ;
 
             
         
     
-        marker_6c0e256231e1469683f89fe4586f6d24.bindTooltip(
-            '<div>'
-            + 'Caneca’s Café ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_967e459431ce4ea48d048e4d41e96b48 = L.marker(
-            [-15.759269699999999, -47.8879261],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_042184e843ab4059bcae491579fce196 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_967e459431ce4ea48d048e4d41e96b48.setIcon(icon_042184e843ab4059bcae491579fce196);
+            var circle_marker_a23a5cf848c445f1a5e5e0d4112ad06e = L.circleMarker(
+                [-15.8721388, -47.8371128],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_4bf813f4207641f7bc97d5cef55c061e = L.popup({maxWidth: '350'
+            var popup_52e94db608954af6ad8849787abffe69 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_dddea7e5bb3441dab643bfe93e3bc16e = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2Fmw6kgZSB1bSBDaMOqcm8gLSBBc2EgTm9ydGUmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_4bf813f4207641f7bc97d5cef55c061e.setContent(i_frame_dddea7e5bb3441dab643bfe93e3bc16e);
+                var html_9a8f0511a99742f0b386d06ddf30de16 = $('<div id="html_9a8f0511a99742f0b386d06ddf30de16" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/caliandra" style="padding: 3px;" target="_blank">@caliandra</a></b></div>')[0];
+                popup_52e94db608954af6ad8849787abffe69.setContent(html_9a8f0511a99742f0b386d06ddf30de16);
             
 
-            marker_967e459431ce4ea48d048e4d41e96b48.bindPopup(popup_4bf813f4207641f7bc97d5cef55c061e)
+            circle_marker_a23a5cf848c445f1a5e5e0d4112ad06e.bindPopup(popup_52e94db608954af6ad8849787abffe69)
             ;
 
             
         
     
-        marker_967e459431ce4ea48d048e4d41e96b48.bindTooltip(
-            '<div>'
-            + 'Café e um Chêro - Asa Norte' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_b4cc3eabf3ad44b0ab12b63c6dde707f = L.marker(
-            [-15.8052483, -47.9485497],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_ebbee5fed3344a3584c1ee952099a9c4 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b4cc3eabf3ad44b0ab12b63c6dde707f.setIcon(icon_ebbee5fed3344a3584c1ee952099a9c4);
+            var circle_marker_3d16a68de3924b8bbb5d36d8cd5cc103 = L.circleMarker(
+                [-15.7954848, -47.894865700000004],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_58066e68bc044308af659e50e2730ab2 = L.popup({maxWidth: '350'
+            var popup_b6a7e26026884036bc9a0d8f4ca4322e = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_8beac78df77b4046b0a35b12a5b6f039 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9U2V1IFBhdHLDrWNpbyBRdWVyaWRvIENhZsOpJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_58066e68bc044308af659e50e2730ab2.setContent(i_frame_8beac78df77b4046b0a35b12a5b6f039);
+                var html_febc659256b9414192e613d3f5e9eace = $('<div id="html_febc659256b9414192e613d3f5e9eace" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/civitacafesespeciais" style="padding: 3px;" target="_blank">@civitacafesespeciais</a></b></div>')[0];
+                popup_b6a7e26026884036bc9a0d8f4ca4322e.setContent(html_febc659256b9414192e613d3f5e9eace);
             
 
-            marker_b4cc3eabf3ad44b0ab12b63c6dde707f.bindPopup(popup_58066e68bc044308af659e50e2730ab2)
+            circle_marker_3d16a68de3924b8bbb5d36d8cd5cc103.bindPopup(popup_b6a7e26026884036bc9a0d8f4ca4322e)
             ;
 
             
         
     
-        marker_b4cc3eabf3ad44b0ab12b63c6dde707f.bindTooltip(
-            '<div>'
-            + 'Seu Patrício Querido Café' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_5b14db574ef54bcb8c6a04c19260d8d9 = L.marker(
-            [-15.832857800000001, -48.0751064],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_80541db110cb4dbab34a0f5805c543eb = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_5b14db574ef54bcb8c6a04c19260d8d9.setIcon(icon_80541db110cb4dbab34a0f5805c543eb);
+            var circle_marker_61dc73d55df746f2a0d2681486ef138a = L.circleMarker(
+                [-15.7177988, -47.887674700000005],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_d56f57c6801f446fb0e348fb0d2e1916 = L.popup({maxWidth: '350'
+            var popup_16a59c3d812440b48ef8d553d3b8f621 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_2a678666e6e949e59b9c5dcff0438388 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2hvY29sYXRlcyBkbyBDZXJyYWRvJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_d56f57c6801f446fb0e348fb0d2e1916.setContent(i_frame_2a678666e6e949e59b9c5dcff0438388);
+                var html_83d7aed291f14784bc4bfa6637bf646a = $('<div id="html_83d7aed291f14784bc4bfa6637bf646a" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/croqui.cafe" style="padding: 3px;" target="_blank">@croqui.cafe</a></b></div>')[0];
+                popup_16a59c3d812440b48ef8d553d3b8f621.setContent(html_83d7aed291f14784bc4bfa6637bf646a);
             
 
-            marker_5b14db574ef54bcb8c6a04c19260d8d9.bindPopup(popup_d56f57c6801f446fb0e348fb0d2e1916)
+            circle_marker_61dc73d55df746f2a0d2681486ef138a.bindPopup(popup_16a59c3d812440b48ef8d553d3b8f621)
             ;
 
             
         
     
-        marker_5b14db574ef54bcb8c6a04c19260d8d9.bindTooltip(
-            '<div>'
-            + 'Chocolates do Cerrado' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_cee0fc7ab6044cc8a5bead6dc73b4db0 = L.marker(
-            [-15.8352039, -48.0399003],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_70071f9c9ce548e1960443c76b45c2e0 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_cee0fc7ab6044cc8a5bead6dc73b4db0.setIcon(icon_70071f9c9ce548e1960443c76b45c2e0);
+            var circle_marker_2463d888245f479e9e9741118e221e38 = L.circleMarker(
+                [-15.8352039, -48.0399003],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_f3efc2a7fc6b401a8662cc106a05d146 = L.popup({maxWidth: '350'
+            var popup_bdb1b78725fe4cc999bdcd0b9cbf37dd = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_8a976c13a83b42eb8dd1ec586dd2bb22 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9RW3DrWxpb+KAmXMgQ2Fmw6kgJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_f3efc2a7fc6b401a8662cc106a05d146.setContent(i_frame_8a976c13a83b42eb8dd1ec586dd2bb22);
+                var html_c53873fd25ab412a88bad0aedb80828e = $('<div id="html_c53873fd25ab412a88bad0aedb80828e" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/emilioscafesnoinsta" style="padding: 3px;" target="_blank">@emilioscafesnoinsta</a></b></div>')[0];
+                popup_bdb1b78725fe4cc999bdcd0b9cbf37dd.setContent(html_c53873fd25ab412a88bad0aedb80828e);
             
 
-            marker_cee0fc7ab6044cc8a5bead6dc73b4db0.bindPopup(popup_f3efc2a7fc6b401a8662cc106a05d146)
+            circle_marker_2463d888245f479e9e9741118e221e38.bindPopup(popup_bdb1b78725fe4cc999bdcd0b9cbf37dd)
             ;
 
             
         
     
-        marker_cee0fc7ab6044cc8a5bead6dc73b4db0.bindTooltip(
-            '<div>'
-            + 'Emílio’s Café ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_eabdcd1d3bbb4a86ba8afcba1f9679bb = L.marker(
-            [-15.7470158, -47.8858497],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_f5f14cf78f074522ad25a7ace52e1f44 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_eabdcd1d3bbb4a86ba8afcba1f9679bb.setIcon(icon_f5f14cf78f074522ad25a7ace52e1f44);
+            var circle_marker_48fe30cecd1643819774e25b1092b8d0 = L.circleMarker(
+                [-15.8306559, -47.9264053],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_d374874f79af475a89579c95165024c7 = L.popup({maxWidth: '350'
+            var popup_b277bce9596a47969087e4e139cc9743 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_6711fbec567f4510a95582cd9df42472 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2Fmw6kgQ2xhbmRlc3Rpbm8mdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_d374874f79af475a89579c95165024c7.setContent(i_frame_6711fbec567f4510a95582cd9df42472);
+                var html_bd8fdc6d649346f6a00c6970efc74730 = $('<div id="html_bd8fdc6d649346f6a00c6970efc74730" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/ernestocafesespeciais" style="padding: 3px;" target="_blank">@ernestocafesespeciais</a></b></div>')[0];
+                popup_b277bce9596a47969087e4e139cc9743.setContent(html_bd8fdc6d649346f6a00c6970efc74730);
             
 
-            marker_eabdcd1d3bbb4a86ba8afcba1f9679bb.bindPopup(popup_d374874f79af475a89579c95165024c7)
+            circle_marker_48fe30cecd1643819774e25b1092b8d0.bindPopup(popup_b277bce9596a47969087e4e139cc9743)
             ;
 
             
         
     
-        marker_eabdcd1d3bbb4a86ba8afcba1f9679bb.bindTooltip(
-            '<div>'
-            + 'Café Clandestino' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_ddcfbc9e0b9c4fb29a28764e55e6c2bd = L.marker(
-            [-15.8434566, -47.985193100000004],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_06ef57e6a31a480f80ee78606b68be89 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_ddcfbc9e0b9c4fb29a28764e55e6c2bd.setIcon(icon_06ef57e6a31a480f80ee78606b68be89);
+            var circle_marker_a7918b3205a447e48b4ffde28eea7cff = L.circleMarker(
+                [-15.8268269, -47.9064311],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_44a51a1690464cbe903a9a1e1d4122d2 = L.popup({maxWidth: '350'
+            var popup_863da5c7813d4502a84bf0c55ed9ec3e = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_de35fec902dd4384a135fef56f44e1e2 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QWNlcnZvIENhZsOpJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_44a51a1690464cbe903a9a1e1d4122d2.setContent(i_frame_de35fec902dd4384a135fef56f44e1e2);
+                var html_c356bb1d329e491ca2cde303d19b023c = $('<div id="html_c356bb1d329e491ca2cde303d19b023c" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/gentilcafe" style="padding: 3px;" target="_blank">@gentilcafe</a></b></div>')[0];
+                popup_863da5c7813d4502a84bf0c55ed9ec3e.setContent(html_c356bb1d329e491ca2cde303d19b023c);
             
 
-            marker_ddcfbc9e0b9c4fb29a28764e55e6c2bd.bindPopup(popup_44a51a1690464cbe903a9a1e1d4122d2)
+            circle_marker_a7918b3205a447e48b4ffde28eea7cff.bindPopup(popup_863da5c7813d4502a84bf0c55ed9ec3e)
             ;
 
             
         
     
-        marker_ddcfbc9e0b9c4fb29a28764e55e6c2bd.bindTooltip(
-            '<div>'
-            + 'Acervo Café' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_d76f6bc1933a4864b7ec17f68c4007ce = L.marker(
-            [-15.7954848, -47.894865700000004],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_c1df5d240fde4feb875764b54ee1dd4a = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_d76f6bc1933a4864b7ec17f68c4007ce.setIcon(icon_c1df5d240fde4feb875764b54ee1dd4a);
+            var circle_marker_891b5b211cb74402a7fc43f837d474bc = L.circleMarker(
+                [-15.811289000000002, -47.9002271],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_f8e1ffbbb15a4951936ef804edfa99ec = L.popup({maxWidth: '350'
+            var popup_63a0a72019364f5f8193efd4d5054f87 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_507c8a336bdd459aac41ee1cea083b46 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2l2aXTDoSBDYWbDqXMgRXNwZWNpYWlzJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_f8e1ffbbb15a4951936ef804edfa99ec.setContent(i_frame_507c8a336bdd459aac41ee1cea083b46);
+                var html_7385d8fc7d2c410bbd6de333a2b16c3e = $('<div id="html_7385d8fc7d2c410bbd6de333a2b16c3e" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/jacketcafe" style="padding: 3px;" target="_blank">@jacketcafe</a></b></div>')[0];
+                popup_63a0a72019364f5f8193efd4d5054f87.setContent(html_7385d8fc7d2c410bbd6de333a2b16c3e);
             
 
-            marker_d76f6bc1933a4864b7ec17f68c4007ce.bindPopup(popup_f8e1ffbbb15a4951936ef804edfa99ec)
+            circle_marker_891b5b211cb74402a7fc43f837d474bc.bindPopup(popup_63a0a72019364f5f8193efd4d5054f87)
             ;
 
             
         
     
-        marker_d76f6bc1933a4864b7ec17f68c4007ce.bindTooltip(
-            '<div>'
-            + 'Civitá Cafés Especiais' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_f231576766284edcb2e0d69803c4f185 = L.marker(
-            [-15.833798000000002, -48.045178],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_143d35adffe54a45b50a524c646d6f6a = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_f231576766284edcb2e0d69803c4f185.setIcon(icon_143d35adffe54a45b50a524c646d6f6a);
+            var circle_marker_b9c557a8cb2c4666a604511d537f643c = L.circleMarker(
+                [-15.8090945, -47.887726799999996],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_dab898ab2e78442caf62049b47289bb5 = L.popup({maxWidth: '350'
+            var popup_0093ba9c30f84248a47fce87e82d54f1 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_b8637943a3a7410ca2f21bdaeb449f47 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9TWluaW1hbGl6ZSBDYWbDqSAmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_dab898ab2e78442caf62049b47289bb5.setContent(i_frame_b8637943a3a7410ca2f21bdaeb449f47);
+                var html_2e9b92dbc0294aac9e257e1bd1a38ffd = $('<div id="html_2e9b92dbc0294aac9e257e1bd1a38ffd" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/koppecafes" style="padding: 3px;" target="_blank">@koppecafes</a></b></div>')[0];
+                popup_0093ba9c30f84248a47fce87e82d54f1.setContent(html_2e9b92dbc0294aac9e257e1bd1a38ffd);
             
 
-            marker_f231576766284edcb2e0d69803c4f185.bindPopup(popup_dab898ab2e78442caf62049b47289bb5)
+            circle_marker_b9c557a8cb2c4666a604511d537f643c.bindPopup(popup_0093ba9c30f84248a47fce87e82d54f1)
             ;
 
             
         
     
-        marker_f231576766284edcb2e0d69803c4f185.bindTooltip(
-            '<div>'
-            + 'Minimalize Café ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_b8f69154e7f34444a5c82349abf78adc = L.marker(
-            [-15.815251199999999, -47.9119684],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_274cc92c0b94444698cc4fe9c8deac9b = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b8f69154e7f34444a5c82349abf78adc.setIcon(icon_274cc92c0b94444698cc4fe9c8deac9b);
+            var circle_marker_cbb20eba81fe4def995d505b1e453969 = L.circleMarker(
+                [-15.8267484, -47.90884129999999],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_70ad4bb00079457aae261b247aa5e02e = L.popup({maxWidth: '350'
+            var popup_76d9098972784ae99b50cdcefa3f3d66 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_93b3af2e168c45e9b6d86666142e6f21 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9TWVyY2FkbyBkbyBDYWbDqSBkZSBCcmFzw61saWEmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_70ad4bb00079457aae261b247aa5e02e.setContent(i_frame_93b3af2e168c45e9b6d86666142e6f21);
+                var html_57fc53075efd49c5ae91050c4f2404c0 = $('<div id="html_57fc53075efd49c5ae91050c4f2404c0" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/lalecafedoceria" style="padding: 3px;" target="_blank">@lalecafedoceria</a></b></div>')[0];
+                popup_76d9098972784ae99b50cdcefa3f3d66.setContent(html_57fc53075efd49c5ae91050c4f2404c0);
             
 
-            marker_b8f69154e7f34444a5c82349abf78adc.bindPopup(popup_70ad4bb00079457aae261b247aa5e02e)
+            circle_marker_cbb20eba81fe4def995d505b1e453969.bindPopup(popup_76d9098972784ae99b50cdcefa3f3d66)
             ;
 
             
         
     
-        marker_b8f69154e7f34444a5c82349abf78adc.bindTooltip(
-            '<div>'
-            + 'Mercado do Café de Brasília' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_fc274975b09148c2b608b05b3e4de284 = L.marker(
-            [-15.739819099999998, -47.893555600000006],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_e71d57bed02446fb949f0861b43f7c99 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_fc274975b09148c2b608b05b3e4de284.setIcon(icon_e71d57bed02446fb949f0861b43f7c99);
+            var circle_marker_796f6599a2bd44bdbe7c36269ecc161c = L.circleMarker(
+                [-15.773610000000001, -47.878704],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_a353415bccd7416ea4970e84f6a812fc = L.popup({maxWidth: '350'
+            var popup_bd5678bb04b743109ad4e5305dfffab2 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_4c1975ace73d4ab2adf075f20b96cc1e = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9U2FsdmUgQ2Fmw6kgTWFyYXZpbGhhJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_a353415bccd7416ea4970e84f6a812fc.setContent(i_frame_4c1975ace73d4ab2adf075f20b96cc1e);
+                var html_162779c74ab34694ab70fbcea1a0bb3d = $('<div id="html_162779c74ab34694ab70fbcea1a0bb3d" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/losbaristas" style="padding: 3px;" target="_blank">@losbaristas</a></b></div>')[0];
+                popup_bd5678bb04b743109ad4e5305dfffab2.setContent(html_162779c74ab34694ab70fbcea1a0bb3d);
             
 
-            marker_fc274975b09148c2b608b05b3e4de284.bindPopup(popup_a353415bccd7416ea4970e84f6a812fc)
+            circle_marker_796f6599a2bd44bdbe7c36269ecc161c.bindPopup(popup_bd5678bb04b743109ad4e5305dfffab2)
             ;
 
             
         
     
-        marker_fc274975b09148c2b608b05b3e4de284.bindTooltip(
-            '<div>'
-            + 'Salve Café Maravilha' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_2ff76fd789404505845cdd1e9237463e = L.marker(
-            [-15.843902800000002, -48.029198],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_10df1b68613944349d8dfb6f93e87823 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_2ff76fd789404505845cdd1e9237463e.setIcon(icon_10df1b68613944349d8dfb6f93e87823);
+            var circle_marker_5c97f5c320574874815230411d8106be = L.circleMarker(
+                [-15.833798000000002, -48.045178],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_ce399dc5b09e41c0a423a2941fc7cb70 = L.popup({maxWidth: '350'
+            var popup_063fecd482994ee1bd8aee1e590ce372 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_7a3310eba37f473eb8af1233d40de81c = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QWRvcsOhdmVsIENhZsOpIC0gw4FndWFzIENsYXJhcyZ0PSZ6PTEzJmllPVVURjgmaXdsb2M9Jm91dHB1dD1lbWJlZCIgZnJhbWVib3JkZXI9IjAiIHNjcm9sbGluZz0ibm8iIG1hcmdpbmhlaWdodD0iMCIgbWFyZ2lud2lkdGg9IjAiPjwvaWZyYW1lPjwvZGl2PjwvZGl2Pg==" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_ce399dc5b09e41c0a423a2941fc7cb70.setContent(i_frame_7a3310eba37f473eb8af1233d40de81c);
+                var html_4d163928900f4378a8376cc5adcf92c4 = $('<div id="html_4d163928900f4378a8376cc5adcf92c4" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/minimalizecafe" style="padding: 3px;" target="_blank">@minimalizecafe</a></b></div>')[0];
+                popup_063fecd482994ee1bd8aee1e590ce372.setContent(html_4d163928900f4378a8376cc5adcf92c4);
             
 
-            marker_2ff76fd789404505845cdd1e9237463e.bindPopup(popup_ce399dc5b09e41c0a423a2941fc7cb70)
+            circle_marker_5c97f5c320574874815230411d8106be.bindPopup(popup_063fecd482994ee1bd8aee1e590ce372)
             ;
 
             
         
     
-        marker_2ff76fd789404505845cdd1e9237463e.bindTooltip(
-            '<div>'
-            + 'Adorável Café - Águas Claras' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_37c48c77a7fb4c5fb09566949ba51fdd = L.marker(
-            [-15.8428961, -47.9846321],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_bf263cc811074ecd843d46926fcab323 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_37c48c77a7fb4c5fb09566949ba51fdd.setIcon(icon_bf263cc811074ecd843d46926fcab323);
+            var circle_marker_d456859cfbe545a0996711867f2fc9fb = L.circleMarker(
+                [-15.8029256, -47.895289399999996],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_b0d4ce6481ee4cfd9dc4dc6444719eff = L.popup({maxWidth: '350'
+            var popup_e77f4ee2c7b946fd9dbaaabac7847e65 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_aaa9e6411c54468cbb58a8f6650d8ac3 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2FmdW7DqSBDYWbDqSBCYXImdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_b0d4ce6481ee4cfd9dc4dc6444719eff.setContent(i_frame_aaa9e6411c54468cbb58a8f6650d8ac3);
+                var html_bcdafdcc6cb445f69fe6a6cc2ca310fc = $('<div id="html_bcdafdcc6cb445f69fe6a6cc2ca310fc" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/nossoquadrado" style="padding: 3px;" target="_blank">@nossoquadrado</a></b></div>')[0];
+                popup_e77f4ee2c7b946fd9dbaaabac7847e65.setContent(html_bcdafdcc6cb445f69fe6a6cc2ca310fc);
             
 
-            marker_37c48c77a7fb4c5fb09566949ba51fdd.bindPopup(popup_b0d4ce6481ee4cfd9dc4dc6444719eff)
+            circle_marker_d456859cfbe545a0996711867f2fc9fb.bindPopup(popup_e77f4ee2c7b946fd9dbaaabac7847e65)
             ;
 
             
         
     
-        marker_37c48c77a7fb4c5fb09566949ba51fdd.bindTooltip(
-            '<div>'
-            + 'Cafuné Café Bar' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_b413a26dde474b1d9130a05ed6288b91 = L.marker(
-            [-15.8145487, -47.890049700000006],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_139d36c82b9948189351b8d12dc1a1e9 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b413a26dde474b1d9130a05ed6288b91.setIcon(icon_139d36c82b9948189351b8d12dc1a1e9);
+            var circle_marker_e560a8089ddb45dbb35a4665cba7a9bc = L.circleMarker(
+                [-15.783207999999998, -47.885088700000004],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_5f24d927fe594bc5b34fce3e1fc6589a = L.popup({maxWidth: '350'
+            var popup_ba713a9b04fe449682f9948a77672c5c = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_9a091ab2037b4b1b8be8feb6fd82f723 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QmxlbmQgQ2Fmw6lzICYgTGl2cm9zJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_5f24d927fe594bc5b34fce3e1fc6589a.setContent(i_frame_9a091ab2037b4b1b8be8feb6fd82f723);
+                var html_448598d0bb5b4733b0eb04c8a43ced57 = $('<div id="html_448598d0bb5b4733b0eb04c8a43ced57" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/objetoencontrado" style="padding: 3px;" target="_blank">@objetoencontrado</a></b></div>')[0];
+                popup_ba713a9b04fe449682f9948a77672c5c.setContent(html_448598d0bb5b4733b0eb04c8a43ced57);
             
 
-            marker_b413a26dde474b1d9130a05ed6288b91.bindPopup(popup_5f24d927fe594bc5b34fce3e1fc6589a)
+            circle_marker_e560a8089ddb45dbb35a4665cba7a9bc.bindPopup(popup_ba713a9b04fe449682f9948a77672c5c)
             ;
 
             
         
     
-        marker_b413a26dde474b1d9130a05ed6288b91.bindTooltip(
-            '<div>'
-            + 'Blend Cafés & Livros' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_c274fa838a58402db0249c8d428a9198 = L.marker(
-            [-15.773610000000001, -47.878704],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_77f2b1ff49564e7c9c1ee83c8e00738d = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_c274fa838a58402db0249c8d428a9198.setIcon(icon_77f2b1ff49564e7c9c1ee83c8e00738d);
+            var circle_marker_f17c71e963a543b19b5e52ad334a6de4 = L.circleMarker(
+                [-15.777605599999998, -47.8848292],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_0ce7f1a1a20f4b688bf229ef22c8c0e3 = L.popup({maxWidth: '350'
+            var popup_105f5c8b6f34490aa11d8f04a1526425 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_1a59d777c9684269891df7b317220f48 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9TG9zIEJhcmlzdGFzIC4gQ2FzYSBkZSBDYWbDqXMmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_0ce7f1a1a20f4b688bf229ef22c8c0e3.setContent(i_frame_1a59d777c9684269891df7b317220f48);
+                var html_1b4bc120532846ea8a591c44e6d0353b = $('<div id="html_1b4bc120532846ea8a591c44e6d0353b" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/quanto.cafe" style="padding: 3px;" target="_blank">@quanto.cafe</a></b></div>')[0];
+                popup_105f5c8b6f34490aa11d8f04a1526425.setContent(html_1b4bc120532846ea8a591c44e6d0353b);
             
 
-            marker_c274fa838a58402db0249c8d428a9198.bindPopup(popup_0ce7f1a1a20f4b688bf229ef22c8c0e3)
+            circle_marker_f17c71e963a543b19b5e52ad334a6de4.bindPopup(popup_105f5c8b6f34490aa11d8f04a1526425)
             ;
 
             
         
     
-        marker_c274fa838a58402db0249c8d428a9198.bindTooltip(
-            '<div>'
-            + 'Los Baristas . Casa de Cafés' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_ec6b4266c0204b36bad8c72f8f2fb463 = L.marker(
-            [-15.763476, -47.892666],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_c26b3c0e095e42a29b6c4a4bff0bbce5 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_ec6b4266c0204b36bad8c72f8f2fb463.setIcon(icon_c26b3c0e095e42a29b6c4a4bff0bbce5);
+            var circle_marker_1b3f1e5bdc6942f68f3a2c1e5ebbdac3 = L.circleMarker(
+                [-15.8031604, -47.885430299999996],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_a4160670f6414e18acb557b21e4df1c6 = L.popup({maxWidth: '350'
+            var popup_ffed325fff9940a59ae3dd880d41bf57 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_d429ace024df46d5854c6547b8b4fecc = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QW50b25pZXRhIENhZsOpJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="250"></iframe>')[0];
-                popup_a4160670f6414e18acb557b21e4df1c6.setContent(i_frame_d429ace024df46d5854c6547b8b4fecc);
+                var html_c7faedaf5d614292aa8aa6d0adbf8a05 = $('<div id="html_c7faedaf5d614292aa8aa6d0adbf8a05" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/rapportcafe" style="padding: 3px;" target="_blank">@rapportcafe</a></b></div>')[0];
+                popup_ffed325fff9940a59ae3dd880d41bf57.setContent(html_c7faedaf5d614292aa8aa6d0adbf8a05);
             
 
-            marker_ec6b4266c0204b36bad8c72f8f2fb463.bindPopup(popup_a4160670f6414e18acb557b21e4df1c6)
+            circle_marker_1b3f1e5bdc6942f68f3a2c1e5ebbdac3.bindPopup(popup_ffed325fff9940a59ae3dd880d41bf57)
             ;
 
             
         
     
-        marker_ec6b4266c0204b36bad8c72f8f2fb463.bindTooltip(
-            '<div>'
-            + 'Antonieta Café' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_4183889f6ace42e39a4b7a862f75869a = L.marker(
-            [-15.8306559, -47.9264053],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_ac9f4ea6b0d7496492d02e59f8fc2be1 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_4183889f6ace42e39a4b7a862f75869a.setIcon(icon_ac9f4ea6b0d7496492d02e59f8fc2be1);
+            var circle_marker_10f9ae93da324f60b412e032d951a843 = L.circleMarker(
+                [-15.8052483, -47.9485497],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_212ad139b5014d61be3269cc390a6aef = L.popup({maxWidth: '350'
+            var popup_338b4f50411f48339a475e9eb1a64c6e = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_7d37edfa7d864fdcbc11f2fc2f6d1246 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9RXJuZXN0byBDYWbDqXMgRXNwZWNpYWlzJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_212ad139b5014d61be3269cc390a6aef.setContent(i_frame_7d37edfa7d864fdcbc11f2fc2f6d1246);
+                var html_6b1b0f94c90e4fd4a3c88afcfe72d4ab = $('<div id="html_6b1b0f94c90e4fd4a3c88afcfe72d4ab" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/seupatricioqueridocafe" style="padding: 3px;" target="_blank">@seupatricioqueridocafe</a></b></div>')[0];
+                popup_338b4f50411f48339a475e9eb1a64c6e.setContent(html_6b1b0f94c90e4fd4a3c88afcfe72d4ab);
             
 
-            marker_4183889f6ace42e39a4b7a862f75869a.bindPopup(popup_212ad139b5014d61be3269cc390a6aef)
+            circle_marker_10f9ae93da324f60b412e032d951a843.bindPopup(popup_338b4f50411f48339a475e9eb1a64c6e)
             ;
 
             
         
     
-        marker_4183889f6ace42e39a4b7a862f75869a.bindTooltip(
-            '<div>'
-            + 'Ernesto Cafés Especiais' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_6644f0d825b14cf7b44758a87902a69a = L.marker(
-            [-15.747044099999998, -47.885780600000004],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_37af8f459a7143069d80f3145661de3f = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_6644f0d825b14cf7b44758a87902a69a.setIcon(icon_37af8f459a7143069d80f3145661de3f);
+            var circle_marker_d2bedc271de5433684f1063ec9a8e3ff = L.circleMarker(
+                [-15.7454687, -47.888138899999994],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_083ed3db253147f29ec850493d227265 = L.popup({maxWidth: '350'
+            var popup_9265b9a085a746fc976e85537fd3b8ac = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_5dae0cee8cb14620aad4a6b0b59444c9 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9UXVpbnRhbCBGLzUwOCAmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_083ed3db253147f29ec850493d227265.setContent(i_frame_5dae0cee8cb14620aad4a6b0b59444c9);
+                var html_49064f009127471a921c5c6375dc058e = $('<div id="html_49064f009127471a921c5c6375dc058e" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/the.coffee.hut.bsb" style="padding: 3px;" target="_blank">@the.coffee.hut.bsb</a></b></div>')[0];
+                popup_9265b9a085a746fc976e85537fd3b8ac.setContent(html_49064f009127471a921c5c6375dc058e);
             
 
-            marker_6644f0d825b14cf7b44758a87902a69a.bindPopup(popup_083ed3db253147f29ec850493d227265)
+            circle_marker_d2bedc271de5433684f1063ec9a8e3ff.bindPopup(popup_9265b9a085a746fc976e85537fd3b8ac)
             ;
 
             
         
     
-        marker_6644f0d825b14cf7b44758a87902a69a.bindTooltip(
-            '<div>'
-            + 'Quintal F/508 ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_d2680251731a452a8ef11b5a64ddfbed = L.marker(
-            [-15.865766399999998, -48.085064200000005],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_7f07442f2a6d4ddf8e55f7440b0e69e0 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_d2680251731a452a8ef11b5a64ddfbed.setIcon(icon_7f07442f2a6d4ddf8e55f7440b0e69e0);
+            var circle_marker_b2db6f04ca664d2bb476a3f84ee41157 = L.circleMarker(
+                [-15.738894400000001, -47.8906671],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_ea2befaf240f4c20be114de2f06ed3be = L.popup({maxWidth: '350'
+            var popup_50a6dfc9b2e445caabac6e86a29d6cd1 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_696ea1ea18864cad8ea781b796f566de = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9UkVQw5pCTElDQSAtIGNhZsOpICYgbmVnw7NjaW9zJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_ea2befaf240f4c20be114de2f06ed3be.setContent(i_frame_696ea1ea18864cad8ea781b796f566de);
+                var html_61bd96f1f330463a89c7b1378ca35d66 = $('<div id="html_61bd96f1f330463a89c7b1378ca35d66" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/varandapaesartesanais" style="padding: 3px;" target="_blank">@varandapaesartesanais</a></b></div>')[0];
+                popup_50a6dfc9b2e445caabac6e86a29d6cd1.setContent(html_61bd96f1f330463a89c7b1378ca35d66);
             
 
-            marker_d2680251731a452a8ef11b5a64ddfbed.bindPopup(popup_ea2befaf240f4c20be114de2f06ed3be)
+            circle_marker_b2db6f04ca664d2bb476a3f84ee41157.bindPopup(popup_50a6dfc9b2e445caabac6e86a29d6cd1)
             ;
 
             
         
     
-        marker_d2680251731a452a8ef11b5a64ddfbed.bindTooltip(
-            '<div>'
-            + 'REPÚBLICA - café & negócios' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_13afefdfae2e448bb232b457b42f92f1 = L.marker(
-            [-15.8122564, -48.0842067],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_aea693134c62412a97a6b43c171950ea = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_13afefdfae2e448bb232b457b42f92f1.setIcon(icon_aea693134c62412a97a6b43c171950ea);
+            var circle_marker_7d4c215b19e14c639c64d22063510e21 = L.circleMarker(
+                [-15.763476, -47.892666],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_a14f3a230f80431a9c65b945d2984eab = L.popup({maxWidth: '350'
+            var popup_8a354b1d2f354ca8bbe61e7e2b74fcee = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_1b8db3c476f0487d92c35a1bcd7a31ee = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2FuZWNh4oCZcyBDYWbDqSAmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_a14f3a230f80431a9c65b945d2984eab.setContent(i_frame_1b8db3c476f0487d92c35a1bcd7a31ee);
+                var html_e7f901731e234da192473f9d7456d7bb = $('<div id="html_e7f901731e234da192473f9d7456d7bb" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/antonietacafe" style="padding: 3px;" target="_blank">@antonietacafe</a></b></div>')[0];
+                popup_8a354b1d2f354ca8bbe61e7e2b74fcee.setContent(html_e7f901731e234da192473f9d7456d7bb);
             
 
-            marker_13afefdfae2e448bb232b457b42f92f1.bindPopup(popup_a14f3a230f80431a9c65b945d2984eab)
+            circle_marker_7d4c215b19e14c639c64d22063510e21.bindPopup(popup_8a354b1d2f354ca8bbe61e7e2b74fcee)
             ;
 
             
         
     
-        marker_13afefdfae2e448bb232b457b42f92f1.bindTooltip(
-            '<div>'
-            + 'Caneca’s Café ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_85070736744e409f8bee6de4ed02ded6 = L.marker(
-            [-15.759269699999999, -47.8879261],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_bd69ea7e59074266ac2ebac36e0dd56c = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_85070736744e409f8bee6de4ed02ded6.setIcon(icon_bd69ea7e59074266ac2ebac36e0dd56c);
+            var circle_marker_0d9008da73f74386821ccd69f4c2d512 = L.circleMarker(
+                [15.8145487, -47.890049700000006],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_5fec230e85ae423d95a7e84d16a3fe1d = L.popup({maxWidth: '350'
+            var popup_e5f41ec078894217a976952dc214754c = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_837d332d625e40a480c998e32931fa7f = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2Fmw6kgZSB1bSBDaMOqcm8gLSBBc2EgTm9ydGUmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_5fec230e85ae423d95a7e84d16a3fe1d.setContent(i_frame_837d332d625e40a480c998e32931fa7f);
+                var html_98ce52f70ed94f14bc8c04037ee46825 = $('<div id="html_98ce52f70ed94f14bc8c04037ee46825" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/blend.cafesbsb" style="padding: 3px;" target="_blank">@blend.cafesbsb</a></b></div>')[0];
+                popup_e5f41ec078894217a976952dc214754c.setContent(html_98ce52f70ed94f14bc8c04037ee46825);
             
 
-            marker_85070736744e409f8bee6de4ed02ded6.bindPopup(popup_5fec230e85ae423d95a7e84d16a3fe1d)
+            circle_marker_0d9008da73f74386821ccd69f4c2d512.bindPopup(popup_e5f41ec078894217a976952dc214754c)
             ;
 
             
         
     
-        marker_85070736744e409f8bee6de4ed02ded6.bindTooltip(
-            '<div>'
-            + 'Café e um Chêro - Asa Norte' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_27bd805a4d7a4fd795ba192309fe32ba = L.marker(
-            [-15.8052483, -47.9485497],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_8246a904f1314b08af9631646e6d1c2a = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_27bd805a4d7a4fd795ba192309fe32ba.setIcon(icon_8246a904f1314b08af9631646e6d1c2a);
+            var circle_marker_d7561b7983364d9f8f896d63fe31a4dc = L.circleMarker(
+                [-15.7530264, -47.8814919],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_c38e11af6ed047bbae1459164e4a044e = L.popup({maxWidth: '350'
+            var popup_3620a4130e724900bb1bb641bd5e8f8a = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_b56bd5e401564f9199c9114c20ab0664 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9U2V1IFBhdHLDrWNpbyBRdWVyaWRvIENhZsOpJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_c38e11af6ed047bbae1459164e4a044e.setContent(i_frame_b56bd5e401564f9199c9114c20ab0664);
+                var html_e287a1fb74e74e5e9a6f14a228f79a9e = $('<div id="html_e287a1fb74e74e5e9a6f14a228f79a9e" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/casinhacafe" style="padding: 3px;" target="_blank">@casinhacafe</a></b></div>')[0];
+                popup_3620a4130e724900bb1bb641bd5e8f8a.setContent(html_e287a1fb74e74e5e9a6f14a228f79a9e);
             
 
-            marker_27bd805a4d7a4fd795ba192309fe32ba.bindPopup(popup_c38e11af6ed047bbae1459164e4a044e)
+            circle_marker_d7561b7983364d9f8f896d63fe31a4dc.bindPopup(popup_3620a4130e724900bb1bb641bd5e8f8a)
             ;
 
             
         
     
-        marker_27bd805a4d7a4fd795ba192309fe32ba.bindTooltip(
-            '<div>'
-            + 'Seu Patrício Querido Café' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_cec13f74a3524547aebd498e700ac063 = L.marker(
-            [-15.832857800000001, -48.0751064],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_42b79e9d66304f5aaf68ae1652627db1 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_cec13f74a3524547aebd498e700ac063.setIcon(icon_42b79e9d66304f5aaf68ae1652627db1);
+            var circle_marker_94874f57108b42ed9c6196dd7a4b7b7e = L.circleMarker(
+                [-15.783195800000001, -47.8858187],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_a47da8b9d9034c239895d56dd46c1ea6 = L.popup({maxWidth: '350'
+            var popup_d22a72526ed74e29918b1e09acdc2685 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_555a44fc15034bd3925f8eabe569d6a4 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2hvY29sYXRlcyBkbyBDZXJyYWRvJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_a47da8b9d9034c239895d56dd46c1ea6.setContent(i_frame_555a44fc15034bd3925f8eabe569d6a4);
+                var html_ec1db0c8b9c24dce8c807d7aaea484f9 = $('<div id="html_ec1db0c8b9c24dce8c807d7aaea484f9" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/castaliartesanal" style="padding: 3px;" target="_blank">@castaliartesanal</a></b></div>')[0];
+                popup_d22a72526ed74e29918b1e09acdc2685.setContent(html_ec1db0c8b9c24dce8c807d7aaea484f9);
             
 
-            marker_cec13f74a3524547aebd498e700ac063.bindPopup(popup_a47da8b9d9034c239895d56dd46c1ea6)
+            circle_marker_94874f57108b42ed9c6196dd7a4b7b7e.bindPopup(popup_d22a72526ed74e29918b1e09acdc2685)
             ;
 
             
         
     
-        marker_cec13f74a3524547aebd498e700ac063.bindTooltip(
-            '<div>'
-            + 'Chocolates do Cerrado' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_b871e6eeeb714de3b8ac7def42200565 = L.marker(
-            [-15.8352039, -48.0399003],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_a56ac5add5874fdb9d3afae33c902370 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b871e6eeeb714de3b8ac7def42200565.setIcon(icon_a56ac5add5874fdb9d3afae33c902370);
+            var circle_marker_6ffe6e42847a4ab9aa242de1e6eeb450 = L.circleMarker(
+                [-15.840304500000002, -47.9781465],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_d5becabf4973407eb2b84e68dd73f2da = L.popup({maxWidth: '350'
+            var popup_948142478aa64532ac1b3ff5ec10dc0c = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_2cdc9198358e4c91b0d77947a8577a2d = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9RW3DrWxpb+KAmXMgQ2Fmw6kgJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_d5becabf4973407eb2b84e68dd73f2da.setContent(i_frame_2cdc9198358e4c91b0d77947a8577a2d);
+                var html_a8e5ae54f1c141b09f0c8858a87ab669 = $('<div id="html_a8e5ae54f1c141b09f0c8858a87ab669" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/crioulacafe" style="padding: 3px;" target="_blank">@crioulacafe</a></b></div>')[0];
+                popup_948142478aa64532ac1b3ff5ec10dc0c.setContent(html_a8e5ae54f1c141b09f0c8858a87ab669);
             
 
-            marker_b871e6eeeb714de3b8ac7def42200565.bindPopup(popup_d5becabf4973407eb2b84e68dd73f2da)
+            circle_marker_6ffe6e42847a4ab9aa242de1e6eeb450.bindPopup(popup_948142478aa64532ac1b3ff5ec10dc0c)
             ;
 
             
         
     
-        marker_b871e6eeeb714de3b8ac7def42200565.bindTooltip(
-            '<div>'
-            + 'Emílio’s Café ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_e57cb33b2d994804bd1d4641e18654d6 = L.marker(
-            [-15.7470158, -47.8858497],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_f6611fdf8f1d430881a57db00bda129b = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_e57cb33b2d994804bd1d4641e18654d6.setIcon(icon_f6611fdf8f1d430881a57db00bda129b);
+            var circle_marker_2d6a47cb73aa4ae9a6975c85a19cd035 = L.circleMarker(
+                [-15.8427645, -48.024201399999995],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_b9bf064595d7416eab91a4d6dbadd330 = L.popup({maxWidth: '350'
+            var popup_ee8e743780674cbe928decdda36cee2c = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_adaabe5b0f53490ab1597f761cd3d3ef = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2Fmw6kgQ2xhbmRlc3Rpbm8mdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_b9bf064595d7416eab91a4d6dbadd330.setContent(i_frame_adaabe5b0f53490ab1597f761cd3d3ef);
+                var html_46e7d469e5b2409db78e7c0ab532f255 = $('<div id="html_46e7d469e5b2409db78e7c0ab532f255" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/emporiobuongustaio" style="padding: 3px;" target="_blank">@emporiobuongustaio</a></b></div>')[0];
+                popup_ee8e743780674cbe928decdda36cee2c.setContent(html_46e7d469e5b2409db78e7c0ab532f255);
             
 
-            marker_e57cb33b2d994804bd1d4641e18654d6.bindPopup(popup_b9bf064595d7416eab91a4d6dbadd330)
+            circle_marker_2d6a47cb73aa4ae9a6975c85a19cd035.bindPopup(popup_ee8e743780674cbe928decdda36cee2c)
             ;
 
             
         
     
-        marker_e57cb33b2d994804bd1d4641e18654d6.bindTooltip(
-            '<div>'
-            + 'Café Clandestino' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_11943de77d5f45abaa0cd8d0fcfb1850 = L.marker(
-            [-15.8434566, -47.985193100000004],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_2fb177fccb754c788c2aea68d623890d = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_11943de77d5f45abaa0cd8d0fcfb1850.setIcon(icon_2fb177fccb754c788c2aea68d623890d);
+            var circle_marker_68bdf8efbd404433a4dfa4a85e4f03b8 = L.circleMarker(
+                [-15.815251199999999, -47.9119684],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_685dfcc7d35549519b98c5cba344573d = L.popup({maxWidth: '350'
+            var popup_cc4e243789844dffa86b33d9855af3e4 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_8510b8cd9b1040fd89d5cfdccd143851 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QWNlcnZvIENhZsOpJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_685dfcc7d35549519b98c5cba344573d.setContent(i_frame_8510b8cd9b1040fd89d5cfdccd143851);
+                var html_d7f8e0d7d1044571ac0760a849132c0f = $('<div id="html_d7f8e0d7d1044571ac0760a849132c0f" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/mercadodocafe.bsb" style="padding: 3px;" target="_blank">@mercadodocafe.bsb</a></b></div>')[0];
+                popup_cc4e243789844dffa86b33d9855af3e4.setContent(html_d7f8e0d7d1044571ac0760a849132c0f);
             
 
-            marker_11943de77d5f45abaa0cd8d0fcfb1850.bindPopup(popup_685dfcc7d35549519b98c5cba344573d)
+            circle_marker_68bdf8efbd404433a4dfa4a85e4f03b8.bindPopup(popup_cc4e243789844dffa86b33d9855af3e4)
             ;
 
             
         
     
-        marker_11943de77d5f45abaa0cd8d0fcfb1850.bindTooltip(
-            '<div>'
-            + 'Acervo Café' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_b269acef42924d8c8c3bae42826ee62a = L.marker(
-            [-15.7954848, -47.894865700000004],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_6d6387003b1d455c960d001ce1b11cd0 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_b269acef42924d8c8c3bae42826ee62a.setIcon(icon_6d6387003b1d455c960d001ce1b11cd0);
+            var circle_marker_6683ac9a9ca347468776f434ae38ad36 = L.circleMarker(
+                [-15.747044099999998, -47.885780600000004],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_1634f454f3fb4f7996d4cd088183d20f = L.popup({maxWidth: '350'
+            var popup_73be67045d36403e955d2f2dd950f699 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_c69903947e9b4f1e9ce45a8a2ea9af41 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2l2aXTDoSBDYWbDqXMgRXNwZWNpYWlzJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_1634f454f3fb4f7996d4cd088183d20f.setContent(i_frame_c69903947e9b4f1e9ce45a8a2ea9af41);
+                var html_6978f86b941a4404adf992300c732dae = $('<div id="html_6978f86b941a4404adf992300c732dae" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/quintalf508" style="padding: 3px;" target="_blank">@quintalf508</a></b></div>')[0];
+                popup_73be67045d36403e955d2f2dd950f699.setContent(html_6978f86b941a4404adf992300c732dae);
             
 
-            marker_b269acef42924d8c8c3bae42826ee62a.bindPopup(popup_1634f454f3fb4f7996d4cd088183d20f)
+            circle_marker_6683ac9a9ca347468776f434ae38ad36.bindPopup(popup_73be67045d36403e955d2f2dd950f699)
             ;
 
             
         
     
-        marker_b269acef42924d8c8c3bae42826ee62a.bindTooltip(
-            '<div>'
-            + 'Civitá Cafés Especiais' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_2de22e0e3a96496699f9dac0ecfda3d3 = L.marker(
-            [-15.833798000000002, -48.045178],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_2fa32ca2f9d54253867efd6e3106e82d = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_2de22e0e3a96496699f9dac0ecfda3d3.setIcon(icon_2fa32ca2f9d54253867efd6e3106e82d);
+            var circle_marker_611a2277755140258c91b01f9d8efc99 = L.circleMarker(
+                [-15.7398139, -47.8957443],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_de58b03b1bd844c786b357dc290e638c = L.popup({maxWidth: '350'
+            var popup_f77dd9dab61d4096b08befb923629ddb = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_0b5306e290ff4d9bac57afcf1cb83f19 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9TWluaW1hbGl6ZSBDYWbDqSAmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_de58b03b1bd844c786b357dc290e638c.setContent(i_frame_0b5306e290ff4d9bac57afcf1cb83f19);
+                var html_a9b44403536b4263b436f5ead73b4572 = $('<div id="html_a9b44403536b4263b436f5ead73b4572" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/salve_cafe" style="padding: 3px;" target="_blank">@salve_cafe</a></b></div>')[0];
+                popup_f77dd9dab61d4096b08befb923629ddb.setContent(html_a9b44403536b4263b436f5ead73b4572);
             
 
-            marker_2de22e0e3a96496699f9dac0ecfda3d3.bindPopup(popup_de58b03b1bd844c786b357dc290e638c)
+            circle_marker_611a2277755140258c91b01f9d8efc99.bindPopup(popup_f77dd9dab61d4096b08befb923629ddb)
             ;
 
             
         
     
-        marker_2de22e0e3a96496699f9dac0ecfda3d3.bindTooltip(
-            '<div>'
-            + 'Minimalize Café ' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_60c1854d8ce44cb18c21f8e9a5458504 = L.marker(
-            [-15.815251199999999, -47.9119684],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_98bf3c9a5a38479d890beee4158a3cae = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_60c1854d8ce44cb18c21f8e9a5458504.setIcon(icon_98bf3c9a5a38479d890beee4158a3cae);
+            var circle_marker_a6bcb75d44034d9391619722b0cc7d2d = L.circleMarker(
+                [-15.843724599999998, -47.89741970000001],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 10,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_fd02544eb1f1402687e10cc5ecd7bbfa);
             
     
-            var popup_9fe018ce743b48b0b8c0d0a1dc469f65 = L.popup({maxWidth: '350'
+            var popup_f482eeeeb68849638fa4ca85f2f5afc0 = L.popup({maxWidth: '190'
             
             });
 
             
-                var i_frame_b48c5f7188b74dd78a7f244f41a2413b = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9TWVyY2FkbyBkbyBDYWbDqSBkZSBCcmFzw61saWEmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_9fe018ce743b48b0b8c0d0a1dc469f65.setContent(i_frame_b48c5f7188b74dd78a7f244f41a2413b);
+                var html_75b617a8eb274a508d00a209efee8e07 = $('<div id="html_75b617a8eb274a508d00a209efee8e07" style="width: 100.0%; height: 100.0%;"><img src="https://image.flaticon.com/icons/svg/733/733558.svg" alt="Instagram" style="width: 12px; height: 12px;"><b><a href="https://instagram.com/teru_cafe" style="padding: 3px;" target="_blank">@teru_cafe</a></b></div>')[0];
+                popup_f482eeeeb68849638fa4ca85f2f5afc0.setContent(html_75b617a8eb274a508d00a209efee8e07);
             
 
-            marker_60c1854d8ce44cb18c21f8e9a5458504.bindPopup(popup_9fe018ce743b48b0b8c0d0a1dc469f65)
+            circle_marker_a6bcb75d44034d9391619722b0cc7d2d.bindPopup(popup_f482eeeeb68849638fa4ca85f2f5afc0)
             ;
 
             
-        
-    
-        marker_60c1854d8ce44cb18c21f8e9a5458504.bindTooltip(
-            '<div>'
-            + 'Mercado do Café de Brasília' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_5792cf081fa84621929d7e6afe645444 = L.marker(
-            [-15.739819099999998, -47.893555600000006],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_3281446c59aa4584b53186f7ace7a8a0 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_5792cf081fa84621929d7e6afe645444.setIcon(icon_3281446c59aa4584b53186f7ace7a8a0);
-            
-    
-            var popup_be733b55d9a34ee8aad3a05fd9aa8db2 = L.popup({maxWidth: '350'
-            
-            });
-
-            
-                var i_frame_a8afbbbd9f9245c9aed92fbafa7ce3df = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9U2FsdmUgQ2Fmw6kgTWFyYXZpbGhhJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_be733b55d9a34ee8aad3a05fd9aa8db2.setContent(i_frame_a8afbbbd9f9245c9aed92fbafa7ce3df);
-            
-
-            marker_5792cf081fa84621929d7e6afe645444.bindPopup(popup_be733b55d9a34ee8aad3a05fd9aa8db2)
-            ;
-
-            
-        
-    
-        marker_5792cf081fa84621929d7e6afe645444.bindTooltip(
-            '<div>'
-            + 'Salve Café Maravilha' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_04e004efa22e461288096a8ba75a5951 = L.marker(
-            [-15.843902800000002, -48.029198],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_e7cc65db84964834a43eccf2e88e7926 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_04e004efa22e461288096a8ba75a5951.setIcon(icon_e7cc65db84964834a43eccf2e88e7926);
-            
-    
-            var popup_abdf8fe66b7743f797b013aae728e831 = L.popup({maxWidth: '350'
-            
-            });
-
-            
-                var i_frame_777963377fdf4523976c6479043308fa = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QWRvcsOhdmVsIENhZsOpIC0gw4FndWFzIENsYXJhcyZ0PSZ6PTEzJmllPVVURjgmaXdsb2M9Jm91dHB1dD1lbWJlZCIgZnJhbWVib3JkZXI9IjAiIHNjcm9sbGluZz0ibm8iIG1hcmdpbmhlaWdodD0iMCIgbWFyZ2lud2lkdGg9IjAiPjwvaWZyYW1lPjwvZGl2PjwvZGl2Pg==" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_abdf8fe66b7743f797b013aae728e831.setContent(i_frame_777963377fdf4523976c6479043308fa);
-            
-
-            marker_04e004efa22e461288096a8ba75a5951.bindPopup(popup_abdf8fe66b7743f797b013aae728e831)
-            ;
-
-            
-        
-    
-        marker_04e004efa22e461288096a8ba75a5951.bindTooltip(
-            '<div>'
-            + 'Adorável Café - Águas Claras' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_6f52225dd1b04f58b7dd33f9fceb9d47 = L.marker(
-            [-15.8428961, -47.9846321],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_f837e2eb6ef24a429e5846324ca8e5a8 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_6f52225dd1b04f58b7dd33f9fceb9d47.setIcon(icon_f837e2eb6ef24a429e5846324ca8e5a8);
-            
-    
-            var popup_b14e483009e64fa69a53000d5910208c = L.popup({maxWidth: '350'
-            
-            });
-
-            
-                var i_frame_0da5073a507c4ca4b0cdf7cb629160d4 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9Q2FmdW7DqSBDYWbDqSBCYXImdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_b14e483009e64fa69a53000d5910208c.setContent(i_frame_0da5073a507c4ca4b0cdf7cb629160d4);
-            
-
-            marker_6f52225dd1b04f58b7dd33f9fceb9d47.bindPopup(popup_b14e483009e64fa69a53000d5910208c)
-            ;
-
-            
-        
-    
-        marker_6f52225dd1b04f58b7dd33f9fceb9d47.bindTooltip(
-            '<div>'
-            + 'Cafuné Café Bar' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_0d214df416cb46f5bbe36fc6455cee8f = L.marker(
-            [-15.8145487, -47.890049700000006],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_4a6fffd5b3ec4392899b128539d79d07 = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_0d214df416cb46f5bbe36fc6455cee8f.setIcon(icon_4a6fffd5b3ec4392899b128539d79d07);
-            
-    
-            var popup_df2576d54a354530b862f5cc84023df5 = L.popup({maxWidth: '350'
-            
-            });
-
-            
-                var i_frame_e07c521bdb024c429d036549b1ce19ab = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QmxlbmQgQ2Fmw6lzICYgTGl2cm9zJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_df2576d54a354530b862f5cc84023df5.setContent(i_frame_e07c521bdb024c429d036549b1ce19ab);
-            
-
-            marker_0d214df416cb46f5bbe36fc6455cee8f.bindPopup(popup_df2576d54a354530b862f5cc84023df5)
-            ;
-
-            
-        
-    
-        marker_0d214df416cb46f5bbe36fc6455cee8f.bindTooltip(
-            '<div>'
-            + 'Blend Cafés & Livros' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_e474469437b24f32a0b4899454f50c0e = L.marker(
-            [-15.773610000000001, -47.878704],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_133bb0fe13fc406f9d8f56ee334b7aac = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_e474469437b24f32a0b4899454f50c0e.setIcon(icon_133bb0fe13fc406f9d8f56ee334b7aac);
-            
-    
-            var popup_e66a5518c66c4685b63645c9536043fe = L.popup({maxWidth: '350'
-            
-            });
-
-            
-                var i_frame_56be63fb635d441f80a84f77a17a2286 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9TG9zIEJhcmlzdGFzIC4gQ2FzYSBkZSBDYWbDqXMmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWQiIGZyYW1lYm9yZGVyPSIwIiBzY3JvbGxpbmc9Im5vIiBtYXJnaW5oZWlnaHQ9IjAiIG1hcmdpbndpZHRoPSIwIj48L2lmcmFtZT48L2Rpdj48L2Rpdj4=" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_e66a5518c66c4685b63645c9536043fe.setContent(i_frame_56be63fb635d441f80a84f77a17a2286);
-            
-
-            marker_e474469437b24f32a0b4899454f50c0e.bindPopup(popup_e66a5518c66c4685b63645c9536043fe)
-            ;
-
-            
-        
-    
-        marker_e474469437b24f32a0b4899454f50c0e.bindTooltip(
-            '<div>'
-            + 'Los Baristas . Casa de Cafés' + '</div>',
-            {"sticky": true}
-        );
-        
-    
-        var marker_09e9ab791a8146da92b225742c49d1ce = L.marker(
-            [-15.763476, -47.892666],
-            {
-                icon: new L.Icon.Default()
-                }
-            ).addTo(map_577eb4ae078a4eb29064cf2a1f801477);
-        
-    
-
-                var icon_7b66b100be234d47964cc6b0bd47797f = L.AwesomeMarkers.icon({
-                    icon: 'coffee',
-                    iconColor: 'lightgray',
-                    markerColor: 'black',
-                    prefix: 'fa',
-                    extraClasses: 'fa-rotate-0'
-                    });
-                marker_09e9ab791a8146da92b225742c49d1ce.setIcon(icon_7b66b100be234d47964cc6b0bd47797f);
-            
-    
-            var popup_d22d0715eab44a9e859ad96c1ea9dedc = L.popup({maxWidth: '350'
-            
-            });
-
-            
-                var i_frame_f9aaa1bca5d143a0988f99fa49b17733 = $('<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8ZGl2IGNsYXNzPSJtYXBvdXRlciI+PGRpdiBjbGFzcz0iZ21hcF9jYW52YXMiPjxpZnJhbWUgd2lkdGg9IjM1MCIgaGVpZ2h0PSIyNTAiIGlkPSJnbWFwX2NhbnZhcyIgc3JjPSJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9QW50b25pZXRhIENhZsOpJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkIiBmcmFtZWJvcmRlcj0iMCIgc2Nyb2xsaW5nPSJubyIgbWFyZ2luaGVpZ2h0PSIwIiBtYXJnaW53aWR0aD0iMCI+PC9pZnJhbWU+PC9kaXY+PC9kaXY+" width="600" style="border:none !important;" height="270"></iframe>')[0];
-                popup_d22d0715eab44a9e859ad96c1ea9dedc.setContent(i_frame_f9aaa1bca5d143a0988f99fa49b17733);
-            
-
-            marker_09e9ab791a8146da92b225742c49d1ce.bindPopup(popup_d22d0715eab44a9e859ad96c1ea9dedc)
-            ;
-
-            
-        
-    
-        marker_09e9ab791a8146da92b225742c49d1ce.bindTooltip(
-            '<div>'
-            + 'Antonieta Café' + '</div>',
-            {"sticky": true}
-        );
         
 </script>
